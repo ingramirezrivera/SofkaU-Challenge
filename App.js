@@ -1,15 +1,24 @@
 import { questions } from "./src/data/questions.js";
+//import { Player } from "./src/models/Player.js";
 import { Quiz } from "./src/models/Quiz.js";
+import { UI } from "./src/models/UI.js"
 
-function main() {
 
-    const quiz = new Quiz(questions)
-
-    console.log("quiz from main", quiz)
-    console.log(quiz.getQuestionIndex())
-
+function renderStartInfo(quiz, ui){
+    ui.renderStart(() => {
+        console.log('clicked start')
+    })
 }
 
-console.log('questions from main', questions)
+/**
+     * @param {Quiz} quiz mian quiz object
+     * @param {UI} ui main ui object
+     */
+ function main() {
+    const quiz = new Quiz(questions);
+    const ui = new UI();
+    //const player = new Player(console.log('toLS'));
 
-main()
+    renderStartInfo(quiz, ui);
+}
+main();

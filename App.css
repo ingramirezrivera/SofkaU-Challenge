@@ -28,7 +28,7 @@
 }
 html {
     font-size: 62.5%;
-    font-family: var(--Roboto)
+    font-family: var(--e-global-typography-primary-font-family)
 }
 
 body {
@@ -45,7 +45,7 @@ body {
 
 }
 
-.container {
+#root {
     background-color: var(--dark);
     height: auto;
     width: 800px;
