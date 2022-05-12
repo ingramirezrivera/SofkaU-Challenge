@@ -65,8 +65,7 @@ const data = [
         answer: 'Hyper Text Transfer Protocol'
     },
 
-
-
+    
     {
         id: 6,
         level: 2,
@@ -132,8 +131,6 @@ const data = [
         ],
         answer: 'Three'
     },
-
-
 
 
     {
@@ -203,9 +200,6 @@ const data = [
     },
     
 
-
-
-
     {
         id: 16,
         level: 4,
@@ -272,7 +266,6 @@ const data = [
         ],
         answer: 'Three'
     },
-
 
 
     {
