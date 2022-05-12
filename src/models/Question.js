@@ -1,4 +1,6 @@
-class Question {
+
+//Class for questions
+export class Question {
 
     constructor(id, text, category, level, choice, answer){
         this.id = id;
@@ -8,4 +10,11 @@ class Question {
         this.choice = choice;
         this.answer = answer;
     }
+
+    correctAnswer(choice){
+        return choice === this.answer;
+    }
 }
+
+
+
