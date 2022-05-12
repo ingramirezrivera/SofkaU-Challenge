@@ -1,5 +1,7 @@
 const data = [
-    {
+    {   
+        id: 1,
+        level: 1,
         question: 'What year was the very first model of the iPhone released?',
         category: 'Technology',
         choices: [
@@ -11,6 +13,8 @@ const data = [
         answer: '2007'
     },
     {
+        id: 2,
+        level: 1,
         question: 'What’s the shortcut for the “copy” function on most computers?',
         category: 'Technology',
         choices: [
@@ -22,6 +26,8 @@ const data = [
         answer: 'Crtl + c'
     },
     {
+        id: 3,
+        level: 1,
         question: 'What is often seen as the smallest unit of memory?',
         category: 'Technology',
         choices: [
@@ -33,6 +39,8 @@ const data = [
         answer: 'Kilobyte'
     },
     {
+        id: 4,
+        level: 1,
         question: 'Is Java a porgramming languages',
         category: 'Technology',
         choices: [
@@ -44,6 +52,8 @@ const data = [
         answer: 'Yes'
     },
     {
+        id: 5,
+        level: 1,
         question: 'What does HTTP stand for?',
         category: 'Technology',
         choices: [
@@ -58,6 +68,8 @@ const data = [
 
 
     {
+        id: 6,
+        level: 2,
         question: 'Who discovered penicillin?',
         category: 'Science',
         choices: [
@@ -69,6 +81,8 @@ const data = [
         answer: 'Alexander Fleming'
     },
     {
+        id: 7,
+        level: 2,
         question: 'What part of the atom has no electric charge?',
         category: 'Science',
         choices: [
@@ -80,6 +94,8 @@ const data = [
         answer: 'Neutron'
     },   
     {
+        id: 8,
+        level: 2,
         question: 'What is the symbol for Potassium',
         category: 'Science',
         choices: [
@@ -91,6 +107,8 @@ const data = [
         answer: 'K'
     },
     {
+        id: 9,
+        level: 2,
         question: 'Which planet has the most gravity?',
         category: 'Science',
         choices: [
@@ -102,6 +120,8 @@ const data = [
         answer: 'Jupiter'
     },
     {
+        id: 10,
+        level: 2,
         question: 'How many molecules of oxygen does ozone have?',
         category: 'Science',
         choices: [
@@ -117,6 +137,8 @@ const data = [
 
 
     {
+        id: 11,
+        level: 3,
         question: 'What is Hawkeye’s real name?',
         category: 'Culture',
         choices: [
@@ -128,6 +150,8 @@ const data = [
         answer: 'Clint Barton'
     },
     {
+        id: 12,
+        level: 3,
         question: 'Who played Wolverine?',
         category: 'Culture',
         choices: [
@@ -139,6 +163,8 @@ const data = [
         answer: 'Hugh Jackman'
     },
     {
+        id: 13,
+        level: 3,
         question: 'In which US city is Broadway located?',
         category: 'Culture',
         choices: [
@@ -150,6 +176,8 @@ const data = [
         answer: 'New York City'
     },
     {
+        id: 14,
+        level: 3,
         question: 'Who is often credited with creating the world’s first car?',
         category: 'Culture',
         choices: [
@@ -161,6 +189,8 @@ const data = [
         answer: 'Karl Benz'
     },
     {
+        id: 15,
+        level: 3,
         question: 'Which country invented tea?',
         category: 'Culture',
         choices: [
@@ -177,6 +207,8 @@ const data = [
 
 
     {
+        id: 16,
+        level: 4,
         question: 'What is the smallest country in the world?',
         category: 'Hystory and Geography',
         choices: [
@@ -188,6 +220,9 @@ const data = [
         answer: 'Vatican City'
     },
     {
+        id: 17,
+        level: 4,
+
         question: 'In which country Adolph Hitler was born?',
         category: 'Hystory and Geography',
         choices: [
@@ -199,6 +234,8 @@ const data = [
         answer: 'Austria'
     },
     {
+        id: 18,
+        level: 4,
         question: 'John F. Kennedy was assassinated in which city?',
         category: 'Hystory and Geography',
         choices: [
@@ -210,6 +247,8 @@ const data = [
         answer: 'Dallas City'
     },
     {
+        id: 19,
+        level: 4,
         question: 'Which country did AC/DC originate in?',
         category: 'Hystory and Geography',
         choices: [
@@ -221,6 +260,8 @@ const data = [
         answer: 'Australia'
     },
     {
+        id: 20,
+        level: 4,
         question: 'Who was the messenger of the gods?',
         category: 'History and Geography',
         choices: [
@@ -235,6 +276,8 @@ const data = [
 
 
     {
+        id: 21,
+        level: 5,
         question: 'What is the smallest country in the world?',
         category: 'Business & Economy',
         choices: [
@@ -246,6 +289,8 @@ const data = [
         answer: 'Elon Musk'
     },
     {
+        id: 22,
+        level: 5,
         question: 'Richard Branson is the owner of which airline?',
         category: 'Business & Economy',
         choices: [
@@ -257,6 +302,8 @@ const data = [
         answer: 'Virgin Atlantic'
     },
     {
+        id: 23,
+        level: 5,
         question: 'What vehicle is Volkswagen best known for in the world?',
         category: 'Business & Economy',
         choices: [
@@ -268,6 +315,8 @@ const data = [
         answer: 'The Beetle'
     },
     {
+        id: 24,
+        level: 5,
         question: 'What is the slogan of Apple Inc.?',
         category: 'Business & Economy',
         choices: [
@@ -279,6 +328,8 @@ const data = [
         answer: 'Think different'
     },
     {
+        id: 25,
+        level: 5,
         question: 'Which watch company has a pointed crown as its logo?',
         category: 'Business & Economy',
         choices: [
