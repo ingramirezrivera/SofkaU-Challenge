@@ -33,8 +33,11 @@ function renderQuiz(quiz, ui){
 function renderEnd(quiz, ui){
     ui.renderScore(quiz.score, (name) => {
         console.log(name)
+        ui.renderTableRanking()
     })
 }
+
+
 
 
 export function renderGameOver(ui){

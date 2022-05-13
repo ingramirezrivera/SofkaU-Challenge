@@ -119,4 +119,55 @@ export class UI {
 
     }
 
+    renderTableRanking(callback){
+        const tableRankingHTML = `
+        <div class="container">
+            <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
+            <h1>Ranking players</h1> 
+            <hr />
+            <div id="ranking-players">
+                <table style="width:100%">
+                    <tr>
+                    <th>Pos</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>Maria Alejandra</td>
+                    <td>3800</td>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>Daniel Ramírez</td>
+                    <td>3200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ana Maria Tamayo</td>
+                        <td>3200</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Oscar de León</td>
+                        <td>3200</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Antonio Pérez</td>
+                        <td>3200</td>
+                    </tr>
+                </table>
+            </div>
+            <hr />
+            <button id='button' class='button-start'>Play Again</button>
+    </div>`
+
+        const tableRank = document.querySelector("#root");
+        tableRank.innerHTML = tableRankingHTML;
+
+        const button = document.querySelector("#button")
+        button.addEventListener("click", () => callback())
+    }
+
 }
