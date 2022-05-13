@@ -81,11 +81,12 @@ export class UI {
             <h2 id="score">${score}</h2>
             <form id="form" action="/" method="GET">
                 <label for="name"></label>
-                <input id="name" type="text" name="name" placeholder="Your name Here"/>
+                <input id="name" type="text" name="name" placeholder="Your name Here" required/>
                 <button type="submit" id="button-scores" class="button-form">Save your Scores</button>
             </form>
         </div>`;
-  
+        
+        //
         const scores = document.querySelector("#root");
         scores.innerHTML = quizEnd;
     }
