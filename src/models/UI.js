@@ -1,7 +1,7 @@
 export class UI {
     constructor(){}
 
-   
+    //this method render the first layout 
     renderStart(callback) {
         const startHTML = `
         <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="">
@@ -27,6 +27,7 @@ export class UI {
     
     }
 
+    //this method renders the quiz layout and add 
     renderQuiz(category, text, choices, callback, questionIndex, totalQuestions, callbackEnd){
         const quizHTML = `
         <div class="container">
@@ -43,7 +44,7 @@ export class UI {
                 </div>
                 <hr/>
                 <footer>
-                    <div id="round">Round 1 of 5</div>
+                    <div id="round">Round ${questionIndex} of ${totalQuestions}</div>
                     <button id='button-end'>End Quiz</button>
                 </footer>
             </div>
@@ -61,7 +62,7 @@ export class UI {
         //taking the div to render the button choices
         const choicesContainer = document.querySelector("#choices");
         choicesContainer.innerHTML = "";
-        //
+        //render the button's choices
         choices.map((choice, index) => {
             const button = document.createElement("button")
             button.innerHTML = choices[index];
@@ -71,6 +72,22 @@ export class UI {
           });
 
     }
-
+    //this method renders the player scores and ahve the form to save the name
+    renderScore(score){
+        const quizEnd = `
+        <div class="container">
+            <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
+            <h1>Total Score</h1> 
+            <h2 id="score">${score}</h2>
+            <form id="form" action="/" method="GET">
+                <label for="name"></label>
+                <input id="name" type="text" name="name" placeholder="Your name Here"/>
+                <button type="submit" id="button-scores" class="button-form">Save your Scores</button>
+            </form>
+        </div>`;
+  
+        const scores = document.querySelector("#root");
+        scores.innerHTML = quizEnd;
+    }
 
 }
