@@ -199,3 +199,31 @@ input[type=text]:focus {
     font-size: 8rem;
     color: var(--e-global-color-text);
 }
+
+#ranking-players {
+    display: flex;
+    justify-content: center;    
+    font-size: 4rem;
+    color: var(--e-global-color-8ba86b6);
+    
+}
+
+table {
+    width: 100%;
+    font-size: 3rem;
+    margin: 24px;
+}
+
+th, td {
+    border: 1px solid var(--e-global-color-primary);
+    border-radius: 8px;
+    background-color: var(--light);
+    padding: 12px;
+}
+
+td {
+    color: var(--font-color);
+}
+
+
+
