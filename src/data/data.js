@@ -264,7 +264,7 @@ export const data = [
             'Ares',
             'Hermes',
         ],
-        answer: 'Three'
+        answer: 'Hermes'
     },
 
 

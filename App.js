@@ -33,6 +33,11 @@ function renderEnd(quiz, ui){
     ui.renderScore(quiz.score)
 }
 
+
+export function renderGameOver(ui){
+    ui.renderGameOver()
+}
+
 //This is the main function of the App
 /**
      * @param {Quiz} quiz mian quiz object

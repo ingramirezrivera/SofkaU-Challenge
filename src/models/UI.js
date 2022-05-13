@@ -91,4 +91,18 @@ export class UI {
         scores.innerHTML = quizEnd;
     }
 
+    renderGameOver(){
+        const gameOverHTML =`
+        <div class="container">
+            <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
+            <h1>Thanks for participating</h1> 
+            <h2 id="player">Game Over</h2>
+        </div>`
+
+        const scores = document.querySelector("#root");
+        scores.innerHTML = gameOverHTML;
+
+
+    }
+
 }

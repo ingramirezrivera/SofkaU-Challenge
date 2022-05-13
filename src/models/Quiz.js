@@ -1,4 +1,5 @@
 import { Question } from "./Question.js";
+import { renderGameOver } from "../../App.js";
 
 //this class inherits from Questions
 export class Quiz {
@@ -27,15 +28,18 @@ export class Quiz {
 
     //to get the user answer
     /**
-   * @param {string} answer
-   * @param {object} quiz
-   * @param {object} ui 
+   * @param {string} answer choice selected
+   * @param {object} quiz the quiz object
+   * @param {object} ui the ui object
    */
-    getAnswer(answer){
-        if (this.getQuestionIndex().correctAnswer(answer)) {
-            this.score += this.awards[this.questionIndex]
-            console.log(this.score)
-        }
+    getAnswer(answer, quiz, ui){
+        (this.getQuestionIndex().correctAnswer(answer)) ?
+            (this.score += this.awards[this.questionIndex],
+            console.log(this.score))
+        :
+            (this.questionIndex = this.questions.length,
+            renderGameOver(ui))
+        
         this.questionIndex++;
     }
 
