@@ -1,4 +1,4 @@
-import { questions } from "./src/data/questions.js";
+import { newQuiz } from "./src/data/questions.js";
 //import { Player } from "./src/models/Player.js";
 import { Quiz } from "./src/models/Quiz.js";
 import { UI } from "./src/models/UI.js"
@@ -14,13 +14,12 @@ function renderQuiz(quiz, ui){
     ui.renderQuiz()
 }
 
-
 /**
      * @param {Quiz} quiz mian quiz object
      * @param {UI} ui main ui object
      */
  function main() {
-    const quiz = new Quiz(questions);
+    const quiz = new Quiz(newQuiz());
     const ui = new UI();
     //const player = new Player(console.log('toLS'));
 
