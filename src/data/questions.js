@@ -5,10 +5,10 @@ import { data } from "../../src/data/data.js";
 const questions = data.map(
   (question) =>
     new Question(
-      question.id,  
+      question.id,
+      question.level,  
       question.question,
       question.category,
-      question.level,
       question.choices,
       question.answer
     )

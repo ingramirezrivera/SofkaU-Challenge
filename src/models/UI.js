@@ -18,31 +18,28 @@ export class UI {
         </div>
         <button id='button' class='button-start'>Start Quiz</button>
         `
-    
+        //rendering quizHTML on the <div id="root"></div>
         const startRender = document.querySelector("#root");
         startRender.innerHTML = startHTML;
-    
+        //event listener to get action to the next renderQuiz
         const button = document.querySelector("#button")
         button.addEventListener("click", () => callback())
     
     }
 
-    renderQuiz(text, category, choices){
+    renderQuiz(category, text, choices, callback, questionIndex, totalQuestions, callbackEnd){
         const quizHTML = `
         <div class="container">
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
             <div id="quiz">
                 <h1>Quiz</h1>
                 <hr/>
-                <h2 id="category">Category</h2>
+                <h2 id="category">${category}</h2>
                 <hr />
-                <h2 id="question">Could you put a question here?</h2>
+                <h2 id="question">${text}</h2>
                 <hr />
                 <div id="choices">
-                    <button id="button-choice">Choice</button>
-                    <button id="button-choice">Choice</button>
-                    <button id="button-choice">Choice</button>
-                    <button id="button-choice">Choice</button>
+                    
                 </div>
                 <hr/>
                 <footer>
@@ -52,8 +49,27 @@ export class UI {
             </div>
         </div>`
 
+        //rendering quizHTML on the <div id="root"></div>
         const quizRender = document.querySelector("#root");
         quizRender.innerHTML = quizHTML;
+        //rendering the category quiz parameters
+        const categoryTitle = document.querySelector("#category");
+        categoryTitle.innerHTML = "About: " + category;
+        //rendering the text question parameters
+        const questionTitle = document.querySelector("#question");
+        questionTitle.innerHTML = text;
+        //taking the div to render the button choices
+        const choicesContainer = document.querySelector("#choices");
+        choicesContainer.innerHTML = "";
+        //
+        choices.map((choice, index) => {
+            const button = document.createElement("button")
+            button.innerHTML = choices[index];
+            button.id = "button-choice";
+            choicesContainer.append(button);
+            button.addEventListener("click", () => callback(choices[index]));
+          });
+
     }
 
 

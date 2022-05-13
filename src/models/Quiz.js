@@ -2,8 +2,11 @@ import { Question } from "./Question.js";
 
 //this class inherits from Questions
 export class Quiz {
+    level = 0;
     score = 0;
     questionIndex = 0;
+    awards = [100, 200, 500, 1000, 2000];
+
 
     /**
    *

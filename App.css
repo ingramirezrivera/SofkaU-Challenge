@@ -98,19 +98,23 @@ p {
 }
 
 #choices {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     margin: 24px;
 }
+
 #button-choice {
-    display: inline-flexbox;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
     background-color: var(--e-global-color-8ba86b6);
-    width: 40%;
+    width: 65%;
     border-radius: 6px;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--light);
-    margin: 12px 24px;
-    padding: 8px;
+    margin: 8px auto;
+    padding: 12px;
 }
 
 #button-choice:hover {

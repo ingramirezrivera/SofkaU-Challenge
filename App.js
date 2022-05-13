@@ -11,7 +11,20 @@ function renderStartInfo(quiz, ui){
 }
 
 function renderQuiz(quiz, ui){
-    ui.renderQuiz()
+    ui.renderQuiz(
+        quiz.getQuestionIndex().category,
+            quiz.getQuestionIndex().text,
+            quiz.getQuestionIndex().choice, (currentChoice) => { 
+            console.log(currentChoice)
+            quiz.getAnswer(currentChoice, quiz, ui)
+            renderQuiz(quiz,ui)
+            },
+            quiz.questionIndex + 1,
+            quiz.questions.length,
+            () => {
+                renderEnd(quiz,ui)   
+            }
+    )
 }
 
 /**
