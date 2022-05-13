@@ -24,6 +24,7 @@ function renderQuiz(quiz, ui){
                 quiz.questionIndex + 1,
                 quiz.questions.length,
                 () => {
+                    console.log('Ended')
                     renderEnd(quiz,ui)   
                 }
         )

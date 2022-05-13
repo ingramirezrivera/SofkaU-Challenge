@@ -45,7 +45,7 @@ export class UI {
                 <hr/>
                 <footer>
                     <div id="round">Round ${questionIndex} of ${totalQuestions}</div>
-                    <button id='button-end'>End Quiz</button>
+                    <button id="button-end">End Quiz</button>
                 </footer>
             </div>
         </div>`
@@ -62,14 +62,17 @@ export class UI {
         //taking the div to render the button choices
         const choicesContainer = document.querySelector("#choices");
         choicesContainer.innerHTML = "";
-        //render the button's choices
-        choices.map((choice, index) => {
-            const button = document.createElement("button")
-            button.innerHTML = choices[index];
-            button.id = "button-choice";
-            choicesContainer.append(button);
-            button.addEventListener("click", () => callback(choices[index]));
-          });
+            //render the button's choices
+            choices.map((choice, index) => {
+                const button = document.createElement("button")
+                button.innerHTML = choices[index];
+                button.id = "button-choice";
+                choicesContainer.append(button);
+                button.addEventListener("click", () => callback(choices[index]));
+            });
+        //quiz End button to callback to renderEnd
+        const buttonEnd = document.querySelector("#button-end")
+        buttonEnd.addEventListener("click", () => callbackEnd())
 
     }
     //this method renders the player scores and ahve the form to save the name
