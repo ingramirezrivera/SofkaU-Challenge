@@ -73,7 +73,7 @@ export class UI {
 
     }
     //this method renders the player scores and ahve the form to save the name
-    renderScore(score){
+    renderScore(score, callbackSave){
         const quizEnd = `
         <div class="container">
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
@@ -89,8 +89,19 @@ export class UI {
         //
         const scores = document.querySelector("#root");
         scores.innerHTML = quizEnd;
+
+        const name = document.querySelector("#name")
+        const form = document.querySelector("#form")
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            callbackSave(name.value)
+        })
+
+
     }
 
+    //this method render the Game Over Layout
     renderGameOver(){
         const gameOverHTML =`
         <div class="container">

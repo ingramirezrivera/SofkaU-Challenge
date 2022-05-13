@@ -30,7 +30,9 @@ function renderQuiz(quiz, ui){
 }
 
 function renderEnd(quiz, ui){
-    ui.renderScore(quiz.score)
+    ui.renderScore(quiz.score, (name) => {
+        console.log(name)
+    })
 }
 
 
