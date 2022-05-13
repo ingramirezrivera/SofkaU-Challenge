@@ -6,9 +6,14 @@ import { UI } from "./src/models/UI.js"
 
 function renderStartInfo(quiz, ui){
     ui.renderStart(() => {
-        console.log('clicked start')
+        renderQuiz(quiz,ui)  
     })
 }
+
+function renderQuiz(quiz, ui){
+    ui.renderQuiz()
+}
+
 
 /**
      * @param {Quiz} quiz mian quiz object

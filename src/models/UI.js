@@ -1,17 +1,7 @@
 export class UI {
     constructor(){}
 
-    renderStart(callback){
-        const startHTML = `
-        `
-
-        const startRender = document.querySelectorAll("#root");
-        startRender.innerHTML = startHTML;
-
-        const button = document.getElementById("button")
-        button.addEventListener("click", () => callback())
-    }
-
+   
     renderStart(callback) {
         const startHTML = `
         <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="">
@@ -35,7 +25,36 @@ export class UI {
         const button = document.querySelector("#button")
         button.addEventListener("click", () => callback())
     
-      }
+    }
+
+    renderQuiz(text, category, choices){
+        const quizHTML = `
+        <div class="container">
+            <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
+            <div id="quiz">
+                <h1>Quiz</h1>
+                <hr/>
+                <h2 id="category">Category</h2>
+                <hr />
+                <h2 id="question">Could you put a question here?</h2>
+                <hr />
+                <div id="choices">
+                    <button id="button-choice">Choice</button>
+                    <button id="button-choice">Choice</button>
+                    <button id="button-choice">Choice</button>
+                    <button id="button-choice">Choice</button>
+                </div>
+                <hr/>
+                <footer>
+                    <div id="round">Round 1 of 5</div>
+                    <button id='button-end'>End Quiz</button>
+                </footer>
+            </div>
+        </div>`
+
+        const quizRender = document.querySelector("#root");
+        quizRender.innerHTML = quizHTML;
+    }
 
 
 }
