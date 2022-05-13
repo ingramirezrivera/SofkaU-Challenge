@@ -33,11 +33,22 @@ function renderQuiz(quiz, ui){
 function renderEnd(quiz, ui){
     ui.renderScore(quiz.score, (name) => {
         console.log(name)
-        ui.renderTableRanking()
+        renderRanking(quiz, ui, name)
     })
 }
 
+function renderRanking(quiz, ui, name){
+    ui.renderTableRanking(name, quiz.score, () => {
+        console.log("player to thanks", name)
+        renderThanks(quiz, ui, name)
+    })
+}
 
+function renderThanks(quiz, ui, name){
+    console.log("si llego?", name)
+    ui.renderThanksEnd(name)
+
+}
 
 
 export function renderGameOver(ui){
