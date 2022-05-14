@@ -119,7 +119,7 @@ export class UI {
 
     }
 
-    renderTableRanking(callback){
+    renderTableRanking(playerName, score, callback){
         const tableRankingHTML = `
         <div class="container">
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
@@ -133,34 +133,15 @@ export class UI {
                     <th>Score</th>
                     </tr>
                     <tr>
-                    <td>1</td>
-                    <td>Maria Alejandra</td>
-                    <td>3800</td>
+                        <td>1</td>
+                        <td>${playerName}</td>
+                    <td>${score}</td>
                     </tr>
-                    <tr>
-                    <td>2</td>
-                    <td>Daniel Ramírez</td>
-                    <td>3200</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Ana Maria Tamayo</td>
-                        <td>3200</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Oscar de León</td>
-                        <td>3200</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Antonio Pérez</td>
-                        <td>3200</td>
-                    </tr>
+                    
                 </table>
             </div>
             <hr />
-            <button id='button' class='button-start'>Play Again</button>
+            <button id='button' class='button-start'>Continue</button>
     </div>`
 
         const tableRank = document.querySelector("#root");
@@ -168,6 +149,18 @@ export class UI {
 
         const button = document.querySelector("#button")
         button.addEventListener("click", () => callback())
+    }
+
+    renderThanksEnd(playerName){
+        const thanksHTML = `
+        <div class="container">
+            <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
+            <h1>Thanks for participating</h1> 
+            <h2 id="player">${playerName}</h2>
+        </div>`
+
+        const thanks = document.querySelector("#root")
+        thanks.innerHTML = thanksHTML;
     }
 
 }

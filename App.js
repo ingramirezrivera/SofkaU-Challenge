@@ -1,5 +1,5 @@
 import { newQuiz } from "./src/data/questions.js";
-//import { Player } from "./src/models/Player.js";
+import { Player } from "./src/models/Player.js";
 import { Quiz } from "./src/models/Quiz.js";
 import { UI } from "./src/models/UI.js"
 
@@ -24,20 +24,32 @@ function renderQuiz(quiz, ui){
                 quiz.questionIndex + 1,
                 quiz.questions.length,
                 () => {
-                    console.log('Ended')
                     renderEnd(quiz,ui)   
                 }
         )
 }
 
 function renderEnd(quiz, ui){
+    
     ui.renderScore(quiz.score, (name) => {
         console.log(name)
-        ui.renderTableRanking()
+        renderRanking(quiz, ui, name)
+        const player = new Player(name, quiz.score)
+        const players = player.savePlayer()  
+        console.log('Ahora si', players)
     })
 }
 
+function renderRanking(quiz, ui, name){
+    ui.renderTableRanking(name, quiz.score, () => {
+        renderThanks(quiz, ui, name)
+    })
+}
 
+function renderThanks(quiz, ui, name){
+    ui.renderThanksEnd(name)
+
+}
 
 
 export function renderGameOver(ui){
