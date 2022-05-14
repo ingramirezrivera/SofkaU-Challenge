@@ -9,7 +9,6 @@ function renderStartInfo(quiz, ui){
         renderQuiz(quiz,ui)  
     })
 }
-
 //this function render de quiz
 function renderQuiz(quiz, ui){
     (quiz.isEnded()) ? renderEnd(quiz, ui)
@@ -28,7 +27,7 @@ function renderQuiz(quiz, ui){
                 }
         )
 }
-
+//renders the quiz
 function renderEnd(quiz, ui){
     
     ui.renderScore(quiz.score, (name) => {
@@ -38,26 +37,18 @@ function renderEnd(quiz, ui){
         renderRanking(quiz, ui, name, rankingPlayers)
     })
 }
-
+//renders the ranking players
 function renderRanking(quiz, ui, name, rankingPlayers){
     ui.renderTableRanking(rankingPlayers, () => {
         renderThanks(quiz, ui, name)
         })
 }
-
-// function renderRanking(quiz, ui, name, rankingPlayers){
-//     ui.renderTableRanking(name, quiz.score, () => {
-//         renderThanks(quiz, ui, name)
-//         },
-//         rankingPlayers)
-// }
-
+//renders the thanks Layout
 function renderThanks(quiz, ui, name){
     ui.renderThanksEnd(name)
 
 }
-
-
+//renders the game Over Layout 
 export function renderGameOver(ui){
     ui.renderGameOver()
 }

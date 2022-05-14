@@ -63,9 +63,7 @@ export const data = [
             'None of the above',
         ],
         answer: 'Hyper Text Transfer Protocol'
-    },
-
-    
+    },    
     {
         id: 6,
         level: 2,
@@ -131,8 +129,6 @@ export const data = [
         ],
         answer: 'Three'
     },
-
-
     {
         id: 11,
         level: 3,
@@ -197,9 +193,7 @@ export const data = [
             'China',
         ],
         answer: 'China'
-    },
-    
-
+    },  
     {
         id: 16,
         level: 4,
@@ -266,8 +260,6 @@ export const data = [
         ],
         answer: 'Hermes'
     },
-
-
     {
         id: 21,
         level: 5,

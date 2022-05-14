@@ -13,7 +13,7 @@ const questions = data.map(
       question.answer
     )
 );
-
+//Makes the random quiz taking 1 question per level from the data
 export function newQuiz(){
   
   const quizQuestions = [];
