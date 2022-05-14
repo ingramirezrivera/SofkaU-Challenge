@@ -6,7 +6,7 @@ export class UI {
         const startHTML = `
         <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="">
         <h1>Welcome to Sofka U Challenge</h1>
-        <hr>
+        <div id="line-grad"></div>
         <div class="info-container">
             <p><b>In this challenge you will take a Quiz</b></p>
             <br>
@@ -16,6 +16,7 @@ export class UI {
             <p><b>4.</b> If your choice is incorrect you lose the quiz and the awards.
             <p><b>5.</b> Please click in the button below to start and good Look.
         </div>
+        <div id="line-grad"></div>
         <button id='button' class='button-start'>Start Quiz</button>
         `
         //rendering quizHTML on the <div id="root"></div>
@@ -34,15 +35,15 @@ export class UI {
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
             <div id="quiz">
                 <h1>Quiz</h1>
-                <hr/>
-                <h2 id="category">${category}</h2>
-                <hr />
-                <h2 id="question">${text}</h2>
-                <hr />
-                <div id="choices">
+                <div id="line-grad"></div>
+                <div id="choices-container">
+                    <h2 id="category">${category}</h2>
+                    <h2 id="question">${text}</h2>
+                    <div id="choices">
+                </div>
                     
                 </div>
-                <hr/>
+                <div id="line-grad"></div>
                 <footer>
                     <div id="round">Round ${questionIndex} of ${totalQuestions}</div>
                     <button id="button-end">End Quiz</button>
@@ -124,7 +125,7 @@ export class UI {
         <div class="container">
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
             <h1>Ranking players</h1> 
-            <hr />
+            <div id="line-grad"></div>
             <div id="ranking-players">
                 <table class="table">
                     <thead>
@@ -140,7 +141,7 @@ export class UI {
                     
                 </table>
             </div>
-            <hr />
+            <div id="line-grad"></div>
             <button id='button' class='button-start'>Continue</button>
     </div>`
 
@@ -153,9 +154,9 @@ export class UI {
         rankingPlayers.map((playerRank, index) => {
             let row = `
             <tr>
-                <td>${index + 1}</td>
+                <td id="pos-bk">${index + 1}</td>
                 <td>${playerRank.name}</td>
-                <td>${playerRank.score}</td>
+                <td id="score-bk">${playerRank.score}</td>
             </tr>`
             
             table.innerHTML += row;

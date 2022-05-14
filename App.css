@@ -1,5 +1,5 @@
 :root {
-    --font-color:#565656;
+    --font-color:#727272;
     --dark: #C4C4C4;
     --light: #EAEAEA;
     --super-light: #F4F3F3;
@@ -37,6 +37,7 @@ body {
     align-items: center;
     background-image: linear-gradient(to right top, #ff3eaf, #db3db1, #b53daf, #8e3da9, #663b9f, #58389f, #48359f, #34339f, #3f2fad, #4d29ba, #5d1ec5, #6f00d0);;
     height: 100vh;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
 }
 
 #img-logo {
@@ -46,10 +47,10 @@ body {
 }
 
 #root {
-    background-color: var(--dark);
+    background-color: white;
     height: auto;
-    width: 800px;
-    border-radius: 8px;
+    width: 850px;
+    border-radius: 24px;
     text-align: center;
     padding: 4rem;
 }
@@ -80,16 +81,34 @@ p {
     margin: 24px;
 }
 
+#line-grad{
+    position: relative;
+    height: 0px;
+    width: 100%;
+    border: 2.5px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(#232323, #232323) padding-box, linear-gradient(90deg, #ff3eaf, #6f00d0) border-box;
+
+}
+
+#choices-container {
+    margin:12px
+}
+
 #button {
     display: flex;
     justify-content: center;
-    background-color: var(--e-global-color-8ba86b6);
+    background: linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%) padding-box, linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%);
     width: 50%;
-    border-radius: 6px;
-    font-size: 3rem;
+    border-radius: 15px;
+    font-size: 2.5rem;
     color: var(--light);
     margin: 24px auto;
-    padding: 12px;
+    padding: 16px;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    outline:none;
 }
 
 #button:hover {
@@ -110,13 +129,16 @@ p {
     display: inline-flexbox;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--e-global-color-8ba86b6);
+    background-color: var( --e-global-color-accent );
+    color: var( --e-global-color-primary );
     width: 280px;
     border-radius: 6px;
     font-size: 2.2rem;
-    color: var(--light);
     margin: 12px 24px;
     padding: 12px;
+    font-weight: 500;
+    border: none;
+    outline:none;
 }
 
 #button-choice:hover {
@@ -125,13 +147,19 @@ p {
 }
 
 #button-end {
-    margin: 0 auto;
-    padding: 12px;
-    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%) padding-box, linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%);
     width: 50%;
-    border-radius: 6px;
-    font-size: 3rem;
-    color: white;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    color: var(--light);
+    margin: 24px auto;
+    padding: 16px;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    outline:none;
     
 }
 
@@ -143,13 +171,17 @@ p {
 #button-scores {
     display: flex;
     justify-content: center;
-    background-color: var(--e-global-color-8ba86b6);
+    background: linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%) padding-box, linear-gradient(90deg, rgba(111,0,208,1) 35%, rgba(255,62,162,1) 100%);
     width: 60%;
-    border-radius: 6px;
-    font-size: 3rem;
+    border-radius: 15px;
+    font-size: 2.5rem;
     color: var(--light);
     margin: 24px auto;
-    padding: 12px;
+    padding: 16px;
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: 1px;
+    border: none;
+    outline:none;
 }
 
 #button-scores:hover {
@@ -202,11 +234,15 @@ input[type=text]:focus {
 
 #ranking-players {
     display: flex;
+    height: 350px;
+    overflow: auto;
     justify-content: center;    
     font-size: 4rem;
     color: var(--e-global-color-8ba86b6);
     
 }
+
+
 
 table {
     width: 100%;
@@ -215,15 +251,25 @@ table {
 }
 
 th, td {
-    border: 1px solid var(--e-global-color-primary);
+    border: 1px solid var(--e-global-color-8ba86b6));
     border-radius: 8px;
-    background-color: var(--light);
+    background-color: rgb(244, 240, 240);
     padding: 12px;
 }
 
 td {
     color: var(--font-color);
 }
+
+#pos-bk {
+    color: var(--e-global-color-8ba86b6);
+}
+
+#score-bk {
+    color: var(--e-global-color-text);
+    font-weight: bold;
+}
+
 
 
 
