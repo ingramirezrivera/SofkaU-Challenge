@@ -119,24 +119,24 @@ export class UI {
 
     }
 
-    renderTableRanking(playerName, score, callback){
+    renderTableRanking(rankingPlayers, callback){
         const tableRankingHTML = `
         <div class="container">
             <img id="img-logo" src="https://ik.imagekit.io/lvh0tltbeph/SofkaU/logo-sofkau_1Fn3uH-1S.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645658493330" alt="Sofka logo">
             <h1>Ranking players</h1> 
             <hr />
             <div id="ranking-players">
-                <table style="width:100%">
-                    <tr>
-                    <th>Pos</th>
-                    <th>Player</th>
-                    <th>Score</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>${playerName}</td>
-                    <td>${score}</td>
-                    </tr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Player</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="ranking-table">
+                    </tbody>
                     
                 </table>
             </div>
@@ -146,6 +146,21 @@ export class UI {
 
         const tableRank = document.querySelector("#root");
         tableRank.innerHTML = tableRankingHTML;
+
+        const table = document.querySelector("#ranking-table")
+        table.innerHTML = '';
+
+        rankingPlayers.map((playerRank, index) => {
+            let row = `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${playerRank.name}</td>
+                <td>${playerRank.score}</td>
+            </tr>`
+            
+            table.innerHTML += row;
+
+        })
 
         const button = document.querySelector("#button")
         button.addEventListener("click", () => callback())

@@ -33,18 +33,24 @@ function renderEnd(quiz, ui){
     
     ui.renderScore(quiz.score, (name) => {
         console.log(name)
-        renderRanking(quiz, ui, name)
         const player = new Player(name, quiz.score)
-        const players = player.savePlayer()  
-        console.log('Ahora si', players)
+        const rankingPlayers = player.savePlayer()  
+        renderRanking(quiz, ui, name, rankingPlayers)
     })
 }
 
-function renderRanking(quiz, ui, name){
-    ui.renderTableRanking(name, quiz.score, () => {
+function renderRanking(quiz, ui, name, rankingPlayers){
+    ui.renderTableRanking(rankingPlayers, () => {
         renderThanks(quiz, ui, name)
-    })
+        })
 }
+
+// function renderRanking(quiz, ui, name, rankingPlayers){
+//     ui.renderTableRanking(name, quiz.score, () => {
+//         renderThanks(quiz, ui, name)
+//         },
+//         rankingPlayers)
+// }
 
 function renderThanks(quiz, ui, name){
     ui.renderThanksEnd(name)
