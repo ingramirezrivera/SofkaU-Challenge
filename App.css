@@ -251,7 +251,7 @@ table {
 }
 
 th, td {
-    border: 1px solid var(--e-global-color-8ba86b6));
+    border: 1px solid var(--e-global-color-8ba86b6);
     border-radius: 8px;
     background-color: rgb(244, 240, 240);
     padding: 12px;
